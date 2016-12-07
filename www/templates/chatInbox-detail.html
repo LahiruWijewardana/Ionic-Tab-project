@@ -1,0 +1,39 @@
+<ion-view view-title="Inbox">
+   
+  <ion-content class="padding">
+
+    <div class="row">
+
+        <div class="col-40">
+            <img ng-src="{{chat.face}}" style="width: 64px; height: 64px">
+        </div>
+        <div class="col-40 col-center">
+            <h5>{{chat.name}}</h5>
+        </div>
+        <div class="col-25 col-center">
+            <h6 class="positive">{{chat.date}}</h6>
+            <h6 class="positive">{{chat.time}}</h6>
+        </div>
+    
+    </div>
+
+    <div class="row">
+        <div class="col">
+            {{chat.letter}}
+        </div>            
+    </div>
+
+    <div class="row">
+        <div class="col"></div>
+        <div class="col">
+            <a class="button button-balanced"  ng-click="show()">
+                Reply
+            </a>
+        </div>
+        <div class="col"></div>
+        
+    </div>
+    
+  </ion-content>
+
+</ion-view>

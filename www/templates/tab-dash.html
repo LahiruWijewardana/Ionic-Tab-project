@@ -1,0 +1,111 @@
+<body>
+
+<div class="container-narrow" ng-controller="IntroCtrl" ng-init="init()">
+  <div ng-intro-options="IntroOptions" ng-intro-method="CallMe"
+		     ng-intro-oncomplete="CompletedEvent" ng-intro-onexit="ExitEvent"
+		     ng-intro-onchange="ChangeEvent" ng-intro-onbeforechange="BeforeChangeEvent"
+		     ng-intro-onafterchange="AfterChangeEvent"
+		     ng-intro-autostart="ShouldAutoStart">
+
+    <div class="masthead">
+
+
+<ion-view view-title="Inbox">
+  <!--ion-pane ng-controller="AppCtrl" id="myPane"-->
+  <ion-content>
+
+    <a id="step1" class="button" ng-click="CallMe()" >Get Start</a>
+    <a id="step2" class="button"  >exit</a>
+    <a id="step3" class="button"  >settings</a>
+    <ion-list>
+      <ion-item id="step2" class="item-icon-right" ng-repeat="chat in chats" type="item-text-wrap" href="#/tab/dash/{{chat.id}}">
+        
+
+        <div class="row">
+          <div class="col-5 item-avatar col-center" type="item-text-wrap">
+            <img ng-src="{{chat.face}}">
+          </div>
+
+          <div class="col-60 col-center">
+            <h3>{{chat.name}}</h3>
+            <h6>{{chat.lastText}}</h6>
+          </div>
+
+          <div class="col-40 col-center">
+            <h5 class="positive">{{chat.date}}</h5>
+            <h5 class="positive">{{chat.time}}</h5>
+          </div>
+        </div>
+
+        <i class="icon ion-chevron-right icon-accessory"></i>
+
+        <ion-option-button class="button-assertive" ng-click="remove(chat)">
+          Delete
+        </ion-option-button>
+      </ion-item>
+    </ion-list>
+
+
+
+<!--/ion-pane>
+ 
+  <ion-pane ng-controller="OverlayCtrl" class="dark-overlay" ng-show="showOverlay">
+
+    <ion-content class="">
+
+      <div class="row">
+        <div class="col">
+          <h2 class="positive">my pane</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <h2>my pane</h2>
+        </div>
+      </div>
+			
+			<button class="button button-block button-outline button-balanced" ng-click="hideFrost()">Hide me</button>
+		
+		</ion-content>	
+  </ion-pane-->
+
+
+
+
+<!--
+    <ion-pane ng-controller="OverlayCtrl" class="dark-overlay">
+      <ion-header-bar class="bar-clear">
+        <button class="button button-icon ion-ios7-close-empty close-icon pull-right"></button>
+      </ion-header-bar>
+      <ion-content class="content-flush has-header">
+        <div class="overlay-spacer"></div>
+        <ion-list>
+          <ion-item ng-repeat="item in items" class="dark-item">
+            {{item.text}}
+          </ion-item>
+        </ion-list>
+      </ion-content>
+    </ion-pane>
+
+
+    <script id="templates/tab-dash.html" type="text/ng-template">
+      <ion-modal-view>
+        <ion-header-bar class="bar bar-header bar-positive">
+          <h1 class="title">New Contact</h1>
+          <button class="button button-clear button-primary" ng-click="modal.hide()">Cancel</button>
+        </ion-header-bar>
+        <ion-content class="padding">
+          <div class="list">
+        
+            <button class="button button-full button-positive" ng-click="createContact(newUser)">Create</button>
+          </div>
+        </ion-content>
+      </ion-modal-view>
+    </script>
+-->
+  </ion-content>
+</ion-view>
+</div>
+</div>
+</div>
+</body>

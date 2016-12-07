@@ -1,0 +1,31 @@
+<body ng-controller="OverlayCtrl">
+  <div help-overlay="showHelp" overlay-start-callback="onStart(event)" overlay-stop-callback="onStop(event)"
+     style="height: 100%;">
+     <div class="container">
+       <div class="jumbotron">
+         
+
+  <ion-view view-title="Trash">
+    <ion-content>
+
+      <h1 data-intro="Project title" data-position="right">Chardin.js</h1>
+      <a class="button" data-toggle="chardinjs"
+         data-intro="This button toggles the overlay, you can click it, even when the overlay is visible"
+         data-position="left" ng-click="toggleHelp()">See it in action</a>
+
+      <a href="" id="opentour" class="hide" data-toggle="chardinjs">Or open it again</a>
+
+
+      <ion-list>
+        <ion-toggle  ng-model="settings.enableFriends">
+          Enable Friends
+        </ion-toggle>
+      </ion-list>
+    </ion-content>
+  </ion-view>
+
+
+  </div>
+  </div>
+  </div>
+</body>

@@ -1,0 +1,106 @@
+/* Empty. Add your own CSS if you like */
+
+/*
+.modal-backdrop-bg {
+    transition: opacity 300ms ease-in-out;
+    -webkit-transition: opacity 300ms ease-in-out;
+    background-color: #000;
+    opacity: 0;
+}
+
+.active .modal-backdrop-bg {
+    opacity: 0.5;
+}
+
+
+.dark-overlay {
+  background-color: #222 !important;
+  opacity: 0.8;
+}
+.dark-item {
+  background-color: transparent !important;
+  color: #fff !important;
+  border-color: #444 !important;
+}
+.close-icon:before {
+  font-size: 40px !important;
+}
+.bar-clear {
+  background: none;
+}
+.overlay-spacer {
+  height: 100px;
+}
+.content-flush {
+  top: 0px !important;
+}
+
+
+
+
+.dark-overlay {
+  background-color: #222 !important;
+  opacity: 0.8;
+}
+.dark-item {
+  background-color: transparent !important;
+  color: #fff !important;
+  border-color: #444 !important;
+}
+
+*/
+
+body {
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+}
+
+.overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.9);
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+.overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+}
+
+.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}

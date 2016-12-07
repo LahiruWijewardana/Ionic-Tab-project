@@ -1,0 +1,30 @@
+<ion-view view-title="Sent">
+  <ion-content>
+    <ion-list>
+      <ion-item class="item-icon-right" ng-repeat="chat in chats" type="item-text-wrap" href="#/tab/chats/{{chat.id}}">
+        
+         <div class="row">
+          <div class="col-5 item-avatar col-center" type="item-text-wrap">
+            <img ng-src="{{chat.face}}">
+          </div>
+
+          <div class="col-60 col-center">
+            <h3>{{chat.name}}</h3>
+            <h6>{{chat.lastText}}</h6>
+          </div>
+
+          <div class="col-40 col-center">
+            <h5 class="positive">{{chat.date}}</h5>
+            <h5 class="positive">{{chat.time}}</h5>
+          </div>
+        </div>
+
+        <i class="icon ion-chevron-right icon-accessory"></i>
+
+        <ion-option-button class="button-assertive" ng-click="remove(chat)">
+          Delete
+        </ion-option-button>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>
